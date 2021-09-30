@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="130"
+   height="50"
+   viewBox="0 0 34.395834 13.229167"
+   version="1.1"
+   id="svg12737"
+   inkscape:version="1.1 (1:1.1+202105261517+ce6663b3b7)"
+   sodipodi:docname="overheat.svg"
+   inkscape:export-filename="/home/akhil/Projects/nasper/assets/overheat.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview12739"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="130px"
+     inkscape:zoom="2.5039268"
+     inkscape:cx="41.534761"
+     inkscape:cy="41.734447"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer3" />
+  <defs
+     id="defs12734" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="jpeg"
+     style="display:inline">
+    <rect
+       style="opacity:0.98036;fill:#220055;fill-opacity:1;stroke-width:0.881362"
+       id="rect12937"
+       width="13.229167"
+       height="34.395832"
+       x="-1.7763568e-15"
+       y="-34.395832"
+       transform="rotate(90)" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g41"
+       transform="matrix(0,0.9285715,-0.9285715,0,34.395833,-0.75595202)">
+      <path
+         style="fill:#ff2a2a;stroke-width:0.0723469"
+         d="M 11.009644,25.905726 V 13.481719 H 4.8654291 v 12.423934 c -1.5089416,0.9981 -2.5048705,2.709323 -2.5048705,4.654083 0,3.080101 2.4968399,5.577014 5.5770135,5.577014 3.0801739,0 5.5770139,-2.49684 5.5770139,-5.577014 -7.4e-5,-1.944615 -0.996002,-3.655911 -2.504942,-4.65401 z"
+         id="path4" />
+      <g
+         id="g10"
+         transform="matrix(0.072347,0,0,0.072347,-10.583333,-2.578125e-7)"
+         style="fill:#ffffff">
+        <path
+           style="fill:#ffffff"
+           d="m 310.972,351.666 c 0,-10.297 0,-286.396 0,-296.693 C 310.972,24.661 286.311,0 256,0 c -30.311,0 -54.972,24.661 -54.972,54.972 0,10.305 0,286.4 0,296.693 -21.798,16.933 -34.623,42.898 -34.623,70.739 0,49.403 40.193,89.596 89.595,89.596 49.402,0 89.595,-40.193 89.595,-89.595 0,-27.841 -12.825,-53.805 -34.623,-70.739 z M 226.044,54.972 c 0,-16.517 13.439,-29.956 29.956,-29.956 16.517,0 29.956,13.439 29.956,29.956 V 86.92 h -25.795 c -6.91,0 -12.508,5.599 -12.508,12.508 0,6.909 5.599,12.508 12.508,12.508 h 25.795 v 12.975 h -25.795 c -6.91,0 -12.508,5.599 -12.508,12.508 0,6.909 5.599,12.508 12.508,12.508 h 25.795 v 23.912 H 226.044 Z M 256,486.984 c -35.61,0 -64.579,-28.969 -64.579,-64.579 0,-21.731 10.847,-41.881 29.014,-53.898 3.502,-2.317 5.607,-6.232 5.607,-10.432 V 198.856 h 59.912 v 159.219 c 0,4.199 2.106,8.115 5.607,10.432 18.168,12.018 29.014,32.168 29.014,53.898 0.004,35.61 -28.965,64.579 -64.575,64.579 z"
+           id="path6" />
+        <path
+           style="fill:#ffffff"
+           d="m 293.001,409.897 c -6.91,0 -12.508,5.599 -12.508,12.508 0,13.505 -10.987,24.493 -24.493,24.493 -6.91,0 -12.508,5.599 -12.508,12.508 0,6.909 5.599,12.508 12.508,12.508 27.299,0 49.509,-22.208 49.509,-49.509 0,-6.908 -5.6,-12.508 -12.508,-12.508 z"
+           id="path8" />
+      </g>
+    </g>
+  </g>
+</svg>

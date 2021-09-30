@@ -1,0 +1,13 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "activitusbar.views": [
+        {
+            "name": "task.flash",
+            "codicon": "export",
+            "tooltip": "Flash ELF to pico"
+        }
+    ],
+    "files.associations": {
+        "vector": "cpp"
+    }
+}

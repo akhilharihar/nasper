@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Flash via RPI",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/flash_elf"
+        },
+        {
+            "label": "Build Project",
+            "command":"build",
+            "type": "cmake"
+        },
+        {
+            "label": "flash",
+            "type": "shell",
+            "dependsOrder": "sequence",
+            "dependsOn": ["Build Project", "Flash via RPI"]
+        }
+    ]
+}
