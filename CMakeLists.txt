@@ -29,7 +29,6 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
         pico_stdlib
         lvgl
         displays
-        hardware_uart
         millis
         pico_multicore
         tinyusb_device

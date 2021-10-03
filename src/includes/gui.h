@@ -2,6 +2,7 @@
 #define UI_H
 
 #include "lvgl/lvgl.h"
+#include <string>
 
 #ifdef __cplusplus
 extern "C" {
@@ -16,21 +17,13 @@ class Ui {
     lv_obj_t * cpu_value{nullptr};
     lv_obj_t * mem_value{nullptr};
     lv_obj_t * disk_value{nullptr};
-    lv_obj_t * eth0up_speed{nullptr};
-    lv_obj_t * eth0down_speed{nullptr};
-
-    // containers
-    lv_obj_t * eth0_container{nullptr}; // not available or down, up speed. Tracked in eth0_unavailable
-    lv_obj_t * eth0_unavailcontainer{nullptr}; // not available or down, up speed. Tracked in eth0_unavailable
-    lv_obj_t * icon_container{nullptr}; // default icon or www offline icon
-    lv_obj_t * overheat_container{nullptr}; // empty or overheat logo
+    lv_obj_t * network_value{nullptr};
 
     // images
     lv_obj_t * status_icon{nullptr};
-    lv_obj_t * overheat_icon{nullptr};
     
     // default styles
-    lv_style_t screen_style;
+    lv_style_t main_screen_style;
     lv_style_t primary_style;
     lv_style_t secondary_style; // cpu, mem, disk label containers
 
@@ -41,14 +34,12 @@ class Ui {
 
     void create_splash_screen();
     void create_main_screen();
-    void main_screen_icon_c(bool);
-    void main_screen_net_c(const char *, const char *, bool = false);
-    void main_screen_overheat_c(bool);
+    void set_main_screen_status_icon(unsigned short);
     
     public:
     Ui(lv_disp_t *);
     void show_splash_screen(bool);
-    void update_info(const char *, const char *, const char *, const char *, const char *, bool, bool, bool);
+    void update_info(std::string &, std::string &, std::string &, std::string &, std::string &, std::string &, std::string &, std::string &, std::string &);
 };
 
 #ifdef __cplusplus

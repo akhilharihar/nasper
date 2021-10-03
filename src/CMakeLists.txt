@@ -1,5 +1,3 @@
-# include_directories(${CMAKE_CURRENT_LIST_DIR}/includes)
-
 add_library(millis STATIC millis.cpp)
 target_link_libraries(millis pico_stdlib pico_time)
 
