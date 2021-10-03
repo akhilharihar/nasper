@@ -57,6 +57,7 @@ namespace display {
     constexpr unsigned char DGMCTR2 {0xE3}; // Digital Gamma Control 2
 
     class Device {
+
         protected:
         spi_inst_t *SPI;
         const uint CS;
