@@ -7,7 +7,6 @@
             "tooltip": "Flash ELF to pico"
         }
     ],
-    "files.associations": {
-        "vector": "cpp"
-    }
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4
 }
