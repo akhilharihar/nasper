@@ -1,0 +1,9 @@
+[Unit]
+Description=Nasper Display Server
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/sbin/nasper_server.py
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
