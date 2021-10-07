@@ -146,22 +146,16 @@ void Ui::set_main_screen_status_icon(unsigned short icon_type) {
 }
 
 // cpu, mem, disk, ethup, ethdown, eth_unit, eth_unavail, no internet, overheat
-void Ui::update_info(std::string &cpu, std::string &mem, std::string &disk, std::string &ethdown, std::string &ethup, std::string &eth_unit, std::string &eth_unavail, std::string &no_internet, std::string &overheating) {
+void Ui::update_info(std::string &cpu, std::string &mem, std::string &disk, std::string &net_speed, std::string &internet_available, std::string &is_overheating) {
     if(is_splash_screen_active) return;
     lv_label_set_text(cpu_value, cpu.c_str());
     lv_label_set_text(mem_value, mem.c_str());
     lv_label_set_text(disk_value, disk.c_str());
+    lv_label_set_text(network_value, net_speed.c_str());
 
-    if(eth_unavail == "1") {
-        lv_label_set_text(network_value, "Network\n N\\A");
-    } else {
-        std::string net_string{};
-        net_string = "\xef\x80\x99" + std::string(" : ") +  ethdown + std::string(" Mb/s") +"\n\xef\x82\x93" + std::string(" : ") + ethup + std::string(" Mb/s");
-        lv_label_set_text(network_value, net_string.c_str());
-    }
-    if(overheating== "1") {
+    if(is_overheating== "1") {
         set_main_screen_status_icon(1);
-    } else if (eth_unavail == "1" || no_internet == "1") {
+    } else if (internet_available == "0") {
         set_main_screen_status_icon(2);
     } else {
         set_main_screen_status_icon(0);

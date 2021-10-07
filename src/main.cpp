@@ -175,16 +175,15 @@ void tud_hid_set_report_cb(uint8_t itf, uint8_t report_id,
 	std::string line;
 	std::vector<std::string> vec;
 	std::stringstream ss(fdsf);
-	while (std::getline(ss, line, ' '))
+	while (std::getline(ss, line, ';'))
 	{
 		vec.push_back(line);
 	}
 
-	if (vec.size() == 9)
+	if (vec.size() == 6)
 	{
         tud_hid_report(0, "true", sizeof("true"));
-		global_ui->update_info(vec[0], vec[1], vec[2], vec[3], vec[4], vec[5],
-							   vec[6], vec[7], vec[8]);
+		global_ui->update_info(vec[0], vec[1], vec[2], vec[3], vec[4], vec[5]);
 	} else {
         tud_hid_report(0, "false", sizeof("false"));
     }

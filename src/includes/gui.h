@@ -39,7 +39,7 @@ class Ui {
     public:
     Ui(lv_disp_t *);
     void show_splash_screen(bool);
-    void update_info(std::string &, std::string &, std::string &, std::string &, std::string &, std::string &, std::string &, std::string &, std::string &);
+    void update_info(std::string &, std::string &, std::string &, std::string &, std::string &, std::string &);
 };
 
 #ifdef __cplusplus
