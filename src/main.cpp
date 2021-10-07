@@ -7,6 +7,7 @@
 #include "tusb.h"
 #include <sstream>
 #include <string>
+#include "pico/binary_info.h"
 
 display::Ili9486 *global_display;
 Ui *global_ui;
@@ -76,7 +77,14 @@ void core1_entry() {
 }
 
 int main() {
-	lv_init();
+    
+    bi_decl(bi_3pins_with_func(17, 19, 18, GPIO_FUNC_SPI));
+    bi_decl(bi_1pin_with_name(20, "Data/Command"));
+    bi_decl(bi_1pin_with_name(21, "Reset"));
+    bi_decl(bi_1pin_with_name(22, "Back Light"));
+
+	
+    lv_init();
 	//*spi, cs, dc, mosi, sclk, rst , bl
 	// spi0, 17, 20, 19,     18, 21, 0
 	display::Ili9486 tft(spi0, 17, 20, 19, 18, 21);

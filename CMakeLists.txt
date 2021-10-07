@@ -6,7 +6,9 @@ set(CMAKE_CXX_STANDARD 17)
 include(lib/pico-sdk/pico_sdk_init.cmake)
 
 project(nasper 
-VERSION 0.1
+VERSION 0.2
+DESCRIPTION "PC performance display via USB HID"
+HOMEPAGE_URL "https://github.com/akhilharihar/nasper"
 )
 
 # initialize the Raspberry Pi Pico SDK
@@ -33,6 +35,11 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
         pico_multicore
         tinyusb_device
 )
+
+pico_set_program_name(${CMAKE_PROJECT_NAME} ${CMAKE_PROJECT_NAME})
+pico_set_program_version(${CMAKE_PROJECT_NAME} ${CMAKE_PROJECT_VERSION})
+pico_set_program_url(${CMAKE_PROJECT_NAME} ${CMAKE_PROJECT_HOMEPAGE_URL})
+pico_set_program_description(${CMAKE_PROJECT_NAME} ${CMAKE_PROJECT_DESCRIPTION})
 
 pico_enable_stdio_uart(${CMAKE_PROJECT_NAME} 1)
 pico_enable_stdio_usb(${CMAKE_PROJECT_NAME} 0)
