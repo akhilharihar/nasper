@@ -9,6 +9,9 @@ import atexit
 import sys
 
 
+DISK_USAGE_PATH = "/"
+
+
 class Info:
     __instance = None
     _USB_VID = 0xcafe
@@ -90,13 +93,13 @@ class Info:
         if byt < self.KIBI:
             return f"{round(byt)} B"
         elif byt < self.MEBI:
-            return f"{round(byt/self.KIBI)} KB"
+            return f"{round(byt/self.KIBI, 1)} KB"
         elif byt < self.GIBI:
-            return f"{round(byt/self.MEBI)} MB"
+            return f"{round(byt/self.MEBI, 1)} MB"
         elif byt < self.TEBI:
-            return f"{round(byt/self.GIBI)} GB"
+            return f"{round(byt/self.GIBI, 1)} GB"
         else:
-            return f"{round(byt/self.TEBI)} TB"
+            return f"{round(byt/self.TEBI, 1)} TB"
 
     def is_internet_available(self) -> bool:
         try:
@@ -138,7 +141,7 @@ if __name__ == "__main__":
             str_data = "{}%;{}%;{}%;DL: {}/s\nUL: {}/s;{};{};".format(
                 info.cpu_percentage(),
                 info.mem_percentage(),
-                info.disk_percentage('/'),
+                info.disk_percentage(DISK_USAGE_PATH),
                 net[1],
                 net[0],
                 int(internet_available),
@@ -148,7 +151,7 @@ if __name__ == "__main__":
             str_data = "{}%;{}%;{}%;Interface\nN\\A;0;{};".format(
                 info.cpu_percentage(),
                 info.mem_percentage(),
-                info.disk_percentage('/'),
+                info.disk_percentage(DISK_USAGE_PATH),
                 int(info.is_overheating())
             )
         info.send_data(str_data.encode("utf-8"))
