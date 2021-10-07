@@ -138,7 +138,7 @@ if __name__ == "__main__":
             str_data = "{}%;{}%;{}%;DL: {}/s\nUL: {}/s;{};{};".format(
                 info.cpu_percentage(),
                 info.mem_percentage(),
-                info.disk_percentage('/hdd'),
+                info.disk_percentage('/'),
                 net[1],
                 net[0],
                 int(internet_available),
@@ -148,7 +148,7 @@ if __name__ == "__main__":
             str_data = "{}%;{}%;{}%;Interface\nN\\A;0;{};".format(
                 info.cpu_percentage(),
                 info.mem_percentage(),
-                info.disk_percentage('/hdd'),
+                info.disk_percentage('/'),
                 int(info.is_overheating())
             )
         info.send_data(str_data.encode("utf-8"))
