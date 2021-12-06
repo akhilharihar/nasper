@@ -34,6 +34,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
         millis
         pico_multicore
         tinyusb_device
+        pico_unique_id
 )
 
 pico_set_program_name(${CMAKE_PROJECT_NAME} ${CMAKE_PROJECT_NAME})
