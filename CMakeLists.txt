@@ -19,22 +19,22 @@ include_directories(${CMAKE_PROJECT_NAME} lib/)
 
 add_subdirectory(lib/lvgl)
 
+
 add_subdirectory(src)
 target_compile_definitions(lvgl PUBLIC LV_CONF_INCLUDE_SIMPLE)
-target_link_libraries(lvgl millis)
 
 file(GLOB_RECURSE IMAGES src/images/*.c)
 
-add_executable(${CMAKE_PROJECT_NAME} src/main.cpp src/gui.cpp src/usb_descriptors.c ${IMAGES})
+add_executable(${CMAKE_PROJECT_NAME} src/main.cpp src/gui.cpp src/usb_descriptors.c src/millis.cpp ${IMAGES})
 
 target_link_libraries(${CMAKE_PROJECT_NAME}
         pico_stdlib
         lvgl
         displays
-        millis
         pico_multicore
         tinyusb_device
         pico_unique_id
+        pico_time
 )
 
 pico_set_program_name(${CMAKE_PROJECT_NAME} ${CMAKE_PROJECT_NAME})
